@@ -8,15 +8,6 @@ Created on Tue Mar 13 09:53:11 2018
 import psycopg2
 from datetime import datetime as dt
 
-"""
-news=> SELECT * FROM articles LIMIT(5);
-news=> CREATE VIEW articlelog AS
-news-> SELECT author, title FROM log as l
-news-> JOIN articles as a
-news-> ON l.path LIKE concat('%',a.slug,'%');
-CREATE VIEW
-"""
-
 
 # Function 1: What are the most popular three articles?
 def popular_articles():
