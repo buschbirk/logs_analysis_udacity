@@ -1,6 +1,6 @@
 # Logs Analysis
 
-This project uses a Postgres database to analyse data from a fictional news site.
+This project uses a PostgreSQL database to analyse data from a fictional news site.
 
 ## Getting Started
 
