@@ -23,6 +23,8 @@ def popular_articles():
         """
 
     data = sql_query(query)
+    print("1. What are the most popular three articles of all time?")
+    print("........................................................")
     for line in data:
         print(" * \"" + line[0] + "\" -- " + str(line[1]) + " views")
 
@@ -42,6 +44,8 @@ def popular_authors():
         """
 
     data = sql_query(query)
+    print("2. Who are the most popular authors?")
+    print("....................................")
     for line in data:
         print(" * " + line[0] + " -- " + str(line[1]) + " views")
 
@@ -66,9 +70,10 @@ def error_days():
         """
 
     data = sql_query(query)
+    print("3. Which days saw more than 1% of requests being errors?")
+    print("........................................................")
     for line in data:
-        print(" * " + line[0].strftime('%B %d, %Y') + " -- " +
-              str(round(line[1] * 100, 2)) + "% errors")
+        print(' * {0:%B %d, %Y} -- {1:.2%} errors'.format(line[0], line[1]))
 
 
 def sql_query(query):
@@ -84,8 +89,10 @@ def sql_query(query):
 
     return data
 
-popular_articles()
-print("---")
-popular_authors()
-print("---")
-error_days()
+
+if __name__ == '__main__':
+    popular_articles()
+    print("")
+    popular_authors()
+    print("")
+    error_days()
