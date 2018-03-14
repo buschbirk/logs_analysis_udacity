@@ -43,10 +43,10 @@ psql -d news
 ```
 Type in the following SQL command: 
 ```
-CREATE VIEW articlelog AS
+CREATE VIEW articlelogs AS
 SELECT author, title FROM log as l
 JOIN articles as a
-ON l.path LIKE concat('%',a.slug,'%');
+ON l.path LIKE concat('/article/',a.slug);
 ```
 
 ## Run the program
