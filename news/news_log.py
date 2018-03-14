@@ -16,7 +16,7 @@ def popular_articles():
 
     query = """
         SELECT title, COUNT(*) as num
-        FROM articlelog
+        FROM articlelogs
         GROUP BY title
         ORDER BY num DESC
         LIMIT(3)
@@ -34,7 +34,7 @@ def popular_authors():
 
     query = """
         SELECT name, COUNT(a.*) as num
-        FROM articlelog as a
+        FROM articlelogs as a
         JOIN authors as b
         ON a.author = b.id
         GROUP BY name
