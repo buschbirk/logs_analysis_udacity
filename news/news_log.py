@@ -1,5 +1,5 @@
-# -*- coding: utf-8 -*-
-# #!/bin/env python3.6
+#!/usr/bin/env python3.6
+
 """
 Created on Tue Mar 13 09:53:11 2018
 
